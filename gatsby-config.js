@@ -5,13 +5,20 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
+    title: `Sascha Seniuk`,
     description: `Gatsby starter styled with Tailwind`,
     author: `@taylorbryant`,
   },
   plugins: [
-    `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -21,7 +28,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.teal["400"],
         display: `minimal-ui`,
-        icon: `src/images/tailwind-icon.png`,
+        icon: `src/images/favicon_seniuk.png`,
       },
     },
     {
@@ -36,6 +43,5 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
   ],
 };

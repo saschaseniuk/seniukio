@@ -5,40 +5,63 @@ import Header from "./header";
 
 function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900">
-      <Header />
-
-      <main className="flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16">
-        {children}
-      </main>
-
-      <footer className="bg-blue-700">
-        <nav className="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8">
-          <p className="text-white">
-            Created by{` `}
-            <a
-              className="font-bold no-underline"
-              href="https://bryant.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Taylor Bryant
-            </a>
-          </p>
-
-          <p>
-            <a
-              className="font-bold text-white no-underline"
-              href="https://github.com/taylorbryant/gatsby-starter-tailwind"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-          </p>
-        </nav>
-      </footer>
+    <div className="bg-gray-800">
+      <div className="max-w-screen-sm mx-auto flex flex-col min-h-screen font-sans text-white font-thin">
+        <Header />
+  
+        <main className="flex-1 w-full px-6">
+          {children}
+        </main>
+  
+        <footer className="px-12 pb-16">
+          <nav className="text-sm">
+            <p className="text-white">
+              Made with ❤️ by{` `}
+              <a
+                className="font-semibold no-underline"
+                href="https://seniuk.io"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                Sascha Seniuk
+              </a>
+            </p>
+          </nav>
+          <div className="text-sm">
+            <p className="text-white">
+              Powered 🏭 by{` `}
+              <a
+                className="font-semibold no-underline"
+                href="https://www.gatsbyjs.org/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                GatsbyJS
+              </a>
+              {` , `}
+              <a
+                className="font-semibold text-white no-underline"
+                href="https://tailwindcss.com/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                Tailwind CSS
+              </a>
+              {` and `}
+              <a
+                className="font-semibold text-white no-underline"
+                href="https://www.netlify.com/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                Netlify
+              </a>
+            </p>
+          </div>
+        </footer>
+      </div>
     </div>
+    
   );
 }
 

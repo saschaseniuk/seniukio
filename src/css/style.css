@@ -1,5 +1,24 @@
 /*! purgecss start ignore */
 @tailwind base;
+
+h2 {
+    @apply text-2xl text-green-400
+}
+
+blockquote {
+    @apply border-l-4 border-green-400 text-green-400 pl-8
+}
+
+li {
+    @apply text-green-400 mb-2
+}
+
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+.morph {
+  background: linear-gradient(145deg, #293241, #303b4d);
+  box-shadow:  20px 20px 60px #262f3d, 
+               -20px -20px 60px #343f53;
+}
