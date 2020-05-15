@@ -1,21 +1,25 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 export default function BlogPost({ data }) {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
   return (
     <Layout>
-      <SEO
-        title={post.frontmatter.title}
-        metaDescription={post.excerpt}
+      <SEO title={post.frontmatter.title} metaDescription={post.excerpt} />
+      <div className="text-gray-500 text-xs px-6" id="start">
+        {post.frontmatter.date}
+      </div>
+      <h1 className="text-4xl text-green-400 mb-8 px-6 space-y-4">
+        {post.frontmatter.title}
+      </h1>
+      <div
+        className="text-white text-base mb-4 px-6 space-y-4"
+        dangerouslySetInnerHTML={{ __html: post.html }}
       />
-      <div className="text-gray-500 text-xs px-6" id="start">{post.frontmatter.date}</div>
-      <h1 className="text-4xl text-green-400 mb-8 px-6 space-y-4">{post.frontmatter.title}</h1>
-      <div className="text-white text-base mb-4 px-6 space-y-4" dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`

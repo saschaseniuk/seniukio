@@ -1,43 +1,41 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
 import { Link } from "gatsby";
 
 export default class BlogList extends React.Component {
   render() {
-    const { currentPage, numPages } = this.props.pageContext
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
-    const nextPage = (currentPage + 1).toString()
+    const { currentPage, numPages } = this.props.pageContext;
+    const isFirst = currentPage === 1;
+    const isLast = currentPage === numPages;
+    const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString();
+    const nextPage = (currentPage + 1).toString();
 
-    const posts = this.props.data.allMarkdownRemark.edges
+    const posts = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          const slug = node.fields.slug
-          const excerpt = node.excerpt
-          const date = node.frontmatter.date
+          const title = node.frontmatter.title || node.fields.slug;
+          const slug = node.fields.slug;
+          const excerpt = node.excerpt;
+          const date = node.frontmatter.date;
           return (
             <div key={node.fields.slug} className="mb-8 mx-2 p-3 rounded morph">
-                <div className="text-gray-500 text-xs">{date}</div>
-                <Link
-              to={slug + "#start"}
-            >
-              <h1 className="text-xl font-semibold text-green-400 leading-tight mb-4 hover:text-red-500 hover:underline">{title}</h1>  
-            </Link>
-            <p className="text-base">{excerpt}</p>
+              <div className="text-gray-500 text-xs">{date}</div>
+              <Link to={slug + "#start"}>
+                <h1 className="text-xl font-semibold text-green-400 leading-tight mb-4 hover:text-red-500 hover:underline">
+                  {title}
+                </h1>
+              </Link>
+              <p className="text-base">{excerpt}</p>
 
-            <Link
-              to={slug + "#start"}
-            >
-              <button className="text-green-400 my-4 hover:text-red-500 hover:underline">mehr</button>
-            </Link>
-                
+              <Link to={slug + "#start"}>
+                <button className="text-green-400 my-4 hover:text-red-500 hover:underline">
+                  mehr
+                </button>
+              </Link>
             </div>
-          
-          ) 
+          );
         })}
         <ul className="px-8 pb-8 flex justify-between">
           {!isFirst && (
@@ -45,7 +43,7 @@ export default class BlogList extends React.Component {
               ← Zurück in die Zukunft
             </Link>
           )}
-          
+
           {!isLast && (
             <Link to={"/blog/" + nextPage} rel="next" className="ml-auto">
               Ab in die Vergangenheit →
@@ -53,7 +51,7 @@ export default class BlogList extends React.Component {
           )}
         </ul>
       </Layout>
-    )
+    );
   }
 }
 export const blogListQuery = graphql`

@@ -8,13 +8,11 @@ function Layout({ children }) {
     <div className="bg-gray-800">
       <div className="max-w-screen-sm mx-auto flex flex-col min-h-screen font-sans text-white font-thin">
         <Header />
-  
-        <main className="flex-1 w-full px-2">
-          {children}
-        </main>
+
+        <main className="flex-1 w-full px-2">{children}</main>
 
         <div className="h-1 bg-green-400 mx-8 mb-4" />
-  
+
         <footer className="px-8 pb-16">
           <nav className="text-sm">
             <p className="text-white">
@@ -67,7 +65,6 @@ function Layout({ children }) {
         </footer>
       </div>
     </div>
-    
   );
 }
 
