@@ -9,11 +9,11 @@ function Layout({ children }) {
       <div className="max-w-screen-sm mx-auto flex flex-col min-h-screen font-sans text-white font-thin">
         <Header />
   
-        <main className="flex-1 w-full px-6">
+        <main className="flex-1 w-full px-2">
           {children}
         </main>
   
-        <footer className="px-12 pb-16">
+        <footer className="px-8 pb-16">
           <nav className="text-sm">
             <p className="text-white">
               Made with ❤️ by{` `}
