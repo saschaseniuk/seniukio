@@ -9,6 +9,7 @@ export default function BlogPost({ data }) {
     <Layout>
       <SEO
         title={post.frontmatter.title}
+        metaDescription={post.excerpt}
       />
       <div className="text-gray-500 text-xs px-6" id="start">{post.frontmatter.date}</div>
       <h1 className="text-4xl text-green-400 mb-8 px-6 space-y-4">{post.frontmatter.title}</h1>
@@ -25,6 +26,7 @@ export const query = graphql`
         title
         date(formatString: "DD.MM.YYYY")
       }
+      excerpt
     }
   }
 `

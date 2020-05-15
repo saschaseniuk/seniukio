@@ -11,6 +11,7 @@ function IndexPage({ data }) {
     <Layout>
       <SEO
         title="Home"
+        image="../images/seniuk_background.jpg"
       />
       <div className="morph mx-6">
         <img

@@ -12,6 +12,8 @@ function Layout({ children }) {
         <main className="flex-1 w-full px-2">
           {children}
         </main>
+
+        <div className="h-1 bg-green-400 mx-8 mb-4" />
   
         <footer className="px-8 pb-16">
           <nav className="text-sm">

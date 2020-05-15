@@ -6,8 +6,8 @@ const fullConfig = resolveConfig(tailwindConfig);
 module.exports = {
   siteMetadata: {
     title: `Sascha Seniuk`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
+    description: `Mein Name ist Sascha Seniuk. Für mich ist die Digitalisierung die Emanzipation des Kunden. Und so gehört meine Liebe nicht nur meiner Tochter, sondern auch modernen Technologien, die unsere Gesellschaft und unsere Wirtschaft voranbringen.`,
+    author: `@seniuk_`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
