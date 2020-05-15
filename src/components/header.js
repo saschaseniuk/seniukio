@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../utils/fontawesome'
 
 function Header() {
-
+  
+  
+ 
   return (
     <header className="pt-8 px-8">
       <div className="mb-4 flex flex-row space-x-2">
@@ -23,7 +25,7 @@ function Header() {
         </a>
       </div>
       <div>
-        <Link to="/">
+        <Link to="/" title="Sascha Seniuk´s Logo">
           <img
             alt="Sascha Seniuk Logo"
             className="block w-full mx-auto mb-8"
@@ -39,26 +41,31 @@ function Header() {
       <nav className="flex justify-between text-green-400 text-xl mb-10">
         {[
           {
-            route: `/about`,
+            route: `/blog`,
             title: `Blog`,
+            alt: `Hier gibt es alle Blog Artikel in der Übersicht`,
           },
           {
             route: `/contact`,
             title: `Vorträge`,
+            alt: `Hier findest Du Vorträge, die ich bereits gehalten habe oder Interessierten anbiete`,
           },
           {
             route: `/contact`,
             title: `Projekte`,
+            alt: `Ausgewählte Projekte die besonders erwähnenswert sind gibt es hier`,
           },
           {
             route: `/contact`,
             title: `Kontakt`,
+            alt: `Kontakt, Impressum, Datenschutz. Was man halt so braucht`,
           },
         ].map((link) => (
           <Link
             className="hover:text-red-500 hover:underline"
             key={link.title}
             to={link.route}
+            title={link.alt}
           >
             <span className="">
             {link.title}

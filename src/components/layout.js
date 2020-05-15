@@ -18,7 +18,7 @@ function Layout({ children }) {
         <footer className="px-8 pb-16">
           <nav className="text-sm">
             <p className="text-white">
-              Made with ❤️ by{` `}
+              Made with ❤️ and without 🍪 by{` `}
               <a
                 className="font-semibold no-underline"
                 href="https://seniuk.io"

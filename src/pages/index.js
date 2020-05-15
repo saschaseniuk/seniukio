@@ -6,7 +6,6 @@ import SEO from "../components/seo";
 import seniukBackground from "../images/seniuk_background.jpg";
 
 function IndexPage({ data }) {
-  console.log(data)
   return (
     <Layout>
       <SEO
