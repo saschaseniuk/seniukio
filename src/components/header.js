@@ -7,19 +7,19 @@ import '../utils/fontawesome'
 function Header() {
 
   return (
-    <header className="pt-12 px-8">
+    <header className="pt-8 px-8">
       <div className="mb-4 flex flex-row space-x-2">
         <a href="https://www.facebook.com/sascha.seniuk/">
-          <FontAwesomeIcon className="text-2xl text-white" icon={["fab", "facebook-square"]}/>
+          <FontAwesomeIcon className="text-2xl text-white" icon={["fab", "facebook-square"]} title="Besuch mich auf Facebook"/>
         </a>
         <a href="https://www.instagram.com/sascha.seniuk">
-          <FontAwesomeIcon className="text-2xl text-white" icon={["fab", "instagram-square"]}/>
+          <FontAwesomeIcon className="text-2xl text-white" icon={["fab", "instagram-square"]} title="Besuch mich auf Instagram"/>
         </a>
         <a href="https://twitter.com/seniuk_">
-          <FontAwesomeIcon className="text-2xl text-white" icon={["fab", "twitter-square"]}/>
+          <FontAwesomeIcon className="text-2xl text-white" icon={["fab", "twitter-square"]} title="Besuch mich auf Twitter"/>
         </a>
         <a href="https://api.whatsapp.com/send?phone=4915252410129&text=Howdy!">
-          <FontAwesomeIcon className="text-2xl text-white" icon={["fab", "whatsapp-square"]}/>
+          <FontAwesomeIcon className="text-2xl text-white" icon={["fab", "whatsapp-square"]} title="Schreib mir bei WhatsApp"/>
         </a>
       </div>
       <div>

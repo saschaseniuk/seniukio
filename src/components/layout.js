@@ -20,8 +20,9 @@ function Layout({ children }) {
               <a
                 className="font-semibold no-underline"
                 href="https://seniuk.io"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
+                target="_self"
+                rel="follow"
+                title="Sascha Seniuk auf seniuk.io"
               >
                 Sascha Seniuk
               </a>
@@ -35,6 +36,7 @@ function Layout({ children }) {
                 href="https://www.gatsbyjs.org/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
+                title="GatsbyJS"
               >
                 GatsbyJS
               </a>
@@ -44,6 +46,7 @@ function Layout({ children }) {
                 href="https://tailwindcss.com/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
+                title="Tailwind CSS"
               >
                 Tailwind CSS
               </a>
@@ -53,6 +56,7 @@ function Layout({ children }) {
                 href="https://www.netlify.com/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
+                title="Netlify"
               >
                 Netlify
               </a>
