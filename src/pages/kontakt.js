@@ -19,12 +19,12 @@ function ContactPage() {
           </p>
           <div className="flex justify-around py-12 md:hidden">
             <a href="mailto:sascha@seniuk.io">
-              <button className="bg-green-400 text-4xl rounded py-2 px-8">
+              <button className="bg-green-400 text-xl rounded py-2 px-8">
                 E-Mail
               </button>
             </a>
             <a href="tel:+4915252410129">
-              <button className="bg-green-400 text-4xl rounded py-2 px-8">
+              <button className="bg-green-400 text-xl rounded py-2 px-8">
                 Telefon
               </button>
             </a>
