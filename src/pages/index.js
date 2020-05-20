@@ -40,15 +40,9 @@ function IndexPage({ data }) {
           <div key={node.id} className="mb-8 mx-2 p-3 rounded morph">
             <p className="text-gray-500 text-xs">{node.frontmatter.date}</p>
             <Link to={node.fields.slug + "#start"}>
-              <h1 className="text-xl font-semibold text-green-400 leading-tight mb-4 hover:text-red-500 hover:underline">
+              <h1 className="text-2xl font-semibold text-green-400 leading-tight mb-4 hover:text-red-500 hover:underline">
                 {node.frontmatter.title}
               </h1>
-            </Link>
-            <p className="text-base">{node.excerpt}</p>
-            <Link to={node.fields.slug + "#start"}>
-              <button className="text-green-400 my-4 hover:text-red-500 hover:underline">
-                mehr
-              </button>
             </Link>
           </div>
         ))}

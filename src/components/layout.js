@@ -25,12 +25,7 @@ function Layout({ children }) {
                 title="Sascha Seniuk auf seniuk.io"
               >
                 Sascha Seniuk
-              </a>
-            </p>
-          </nav>
-          <div className="text-sm">
-            <p className="text-white">
-              Powered 🏭 by{` `}
+              </a>. ⚙️ by{` `}
               <a
                 className="font-semibold no-underline"
                 href="https://www.gatsbyjs.org/"
@@ -61,7 +56,7 @@ function Layout({ children }) {
                 Netlify
               </a>
             </p>
-          </div>
+          </nav>
         </footer>
       </div>
     </div>
